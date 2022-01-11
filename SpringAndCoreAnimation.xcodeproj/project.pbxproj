@@ -74,16 +74,48 @@
 		CC0A306C278D6D9400F6F9BA /* SpringAndCoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				CC0A306D278D6D9400F6F9BA /* AppDelegate.swift */,
-				CC0A306F278D6D9400F6F9BA /* SceneDelegate.swift */,
-				CC0A3071278D6D9400F6F9BA /* ViewController.swift */,
-				CC0A3073278D6D9400F6F9BA /* Main.storyboard */,
-				CC0A3076278D6D9500F6F9BA /* Assets.xcassets */,
-				CC0A3078278D6D9500F6F9BA /* LaunchScreen.storyboard */,
-				CC0A307B278D6D9500F6F9BA /* Info.plist */,
+				CC1BFDC7278E3323005C8329 /* ViewControllers */,
+				CC1BFDC5278E32F9005C8329 /* StoryBoards */,
+				CC1BFDC6278E3315005C8329 /* Resources */,
+				CC1BFDC4278E32DF005C8329 /* SupportFiles */,
 				CC1BFDC2278D7588005C8329 /* .gitignore */,
 			);
 			path = SpringAndCoreAnimation;
+			sourceTree = "<group>";
+		};
+		CC1BFDC4278E32DF005C8329 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A306D278D6D9400F6F9BA /* AppDelegate.swift */,
+				CC0A306F278D6D9400F6F9BA /* SceneDelegate.swift */,
+				CC0A307B278D6D9500F6F9BA /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		CC1BFDC5278E32F9005C8329 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A3073278D6D9400F6F9BA /* Main.storyboard */,
+				CC0A3078278D6D9500F6F9BA /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		CC1BFDC6278E3315005C8329 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A3076278D6D9500F6F9BA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC1BFDC7278E3323005C8329 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A3071278D6D9400F6F9BA /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		DE5311F0A515AAB5468D5690 /* Frameworks */ = {
@@ -363,7 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpringAndCoreAnimation/Info.plist;
+				INFOPLIST_FILE = SpringAndCoreAnimation/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -391,7 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpringAndCoreAnimation/Info.plist;
+				INFOPLIST_FILE = SpringAndCoreAnimation/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
