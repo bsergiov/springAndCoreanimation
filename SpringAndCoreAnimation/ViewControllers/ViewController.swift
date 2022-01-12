@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet weak var animationButton: UIButton!
     
-    
     @IBOutlet weak var sampleSprinView: SpringView!
     
     @IBOutlet weak var presetLabel: UILabel!
@@ -31,38 +30,45 @@ class ViewController: UIViewController {
     // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationButton.titleLabel?.text = "Run \(animations[nextAnimationIndex].rawValue)"
+        showParamsOnScreen(animation: sampleSprinView.animation,
+                           curve: sampleSprinView.curve,
+                           force: sampleSprinView.force,
+                           duration: sampleSprinView.duration,
+                           delay: sampleSprinView.delay)
+        
+        
+        animationButton.setTitle("Run \(animations[nextAnimationIndex].rawValue)",
+                                 for: .normal)
     }
     
     // MARK: - IB Action
     @IBAction func changedAnimation(_ sender: UIButton) {
         let parametrAnimation = ParamerAnimationModel.getParametrAnimation()
         
-        let animation = animations[nextCurveIndex].rawValue
+        let animation = animations[nextAnimationIndex].rawValue
         let curve = curves[nextCurveIndex].rawValue
         
         let delay = CGFloat(parametrAnimation.delay)
         let force = CGFloat(parametrAnimation.force)
         let duration = CGFloat(parametrAnimation.duration)
         
-        sampleSprinView.animation = animations[nextAnimationIndex].rawValue
-        sampleSprinView.curve = curves[nextCurveIndex].rawValue
-        sampleSprinView.delay = delay
-        sampleSprinView.force = force
-        sampleSprinView.duration = duration
+        setupAnimation(delay: delay,
+                       force: force,
+                       duration: duration)
         
-        sampleSprinView.animate()
         setupNextAnimation()
         
-        presetLabel.text = "Preset: \(animation)"
-        curveLabel.text = "Curve: \(curve)"
+        showParamsOnScreen(animation: animation,
+                           curve: curve,
+                           force: force,
+                           duration: duration,
+                           delay: delay)
         
-        forceLabel.text = "Force: \(Float(round(100 * force) / 100))"
-        durationLabel.text = "Duration: \(Float(round(100 * duration) / 100))"
-        delayLabel.text = "Delay: \(Float(round(100 * delay) / 100))"
+        sender.setTitle("Run \(animations[nextAnimationIndex].rawValue)",
+                        for: .normal)
+        
+        
     }
-    
-
 }
 
 // MARK: - Private methods
@@ -81,6 +87,25 @@ extension ViewController {
             nextCurveIndex = 0
         }
         
+    }
+    
+    private func showParamsOnScreen(animation: String, curve: String, force: CGFloat, duration: CGFloat, delay: CGFloat) {
+        presetLabel.text = "Preset: \(animation)"
+        curveLabel.text = "Curve: \(curve)"
+        
+        forceLabel.text = "Force: \(Float(round(100 * force) / 100))"
+        durationLabel.text = "Duration: \(Float(round(100 * duration) / 100))"
+        delayLabel.text = "Delay: \(Float(round(100 * delay) / 100))"
+    }
+    
+    private func setupAnimation(delay: CGFloat, force: CGFloat, duration: CGFloat) {
+        sampleSprinView.animation = animations[nextAnimationIndex].rawValue
+        sampleSprinView.curve = curves[nextCurveIndex].rawValue
+        sampleSprinView.delay = delay
+        sampleSprinView.force = force
+        sampleSprinView.duration = duration
+        
+        sampleSprinView.animate()
     }
 }
 
