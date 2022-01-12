@@ -15,6 +15,7 @@
 		CC0A3077278D6D9500F6F9BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0A3076278D6D9500F6F9BA /* Assets.xcassets */; };
 		CC0A307A278D6D9500F6F9BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0A3078278D6D9500F6F9BA /* LaunchScreen.storyboard */; };
 		CC1BFDC3278D7588005C8329 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CC1BFDC2278D7588005C8329 /* .gitignore */; };
+		CC1BFDCA278F6BC7005C8329 /* ParametrAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1BFDC9278F6BC7005C8329 /* ParametrAnimationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CC0A3079278D6D9500F6F9BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC0A307B278D6D9500F6F9BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC1BFDC2278D7588005C8329 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CC1BFDC9278F6BC7005C8329 /* ParametrAnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametrAnimationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				CC1BFDC7278E3323005C8329 /* ViewControllers */,
 				CC1BFDC5278E32F9005C8329 /* StoryBoards */,
+				CC1BFDC8278F6B94005C8329 /* Models */,
 				CC1BFDC6278E3315005C8329 /* Resources */,
 				CC1BFDC4278E32DF005C8329 /* SupportFiles */,
 				CC1BFDC2278D7588005C8329 /* .gitignore */,
@@ -116,6 +119,14 @@
 				CC0A3071278D6D9400F6F9BA /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CC1BFDC8278F6B94005C8329 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC1BFDC9278F6BC7005C8329 /* ParametrAnimationModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DE5311F0A515AAB5468D5690 /* Frameworks */ = {
@@ -242,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1BFDCA278F6BC7005C8329 /* ParametrAnimationModel.swift in Sources */,
 				CC0A3072278D6D9400F6F9BA /* ViewController.swift in Sources */,
 				CC0A306E278D6D9400F6F9BA /* AppDelegate.swift in Sources */,
 				CC0A3070278D6D9400F6F9BA /* SceneDelegate.swift in Sources */,
